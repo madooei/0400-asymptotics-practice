@@ -2,8 +2,8 @@
 
 The companion code for two practice problems: removing duplicates from a
 sorted array, and Two Sum on a sorted array, each implemented in every
-variant the practice pages develop, with a JUnit scenario suite that checks
-all variants against the same inputs.
+variant the practice pages develop, with a JUnit scenario suite for each
+problem that you can run against one variant at a time or all of them.
 
 ## Prerequisites
 
@@ -25,10 +25,15 @@ code/
         TwoSumII.java              # two-pointer, binary search, and brute force
     test/
       asymptotics/
-        RemoveDuplicatesTest.java
-        TwoSumIITest.java
+        RemoveDuplicatesTest.java              # the scenarios, written once
+        RemoveDuplicatesTwoPointersTest.java   # runs them against the two-pointer solution
+        RemoveDuplicatesBruteForceTest.java    # runs them against the brute-force solution
+        TwoSumIITest.java                      # the scenarios, written once
+        TwoSumIITwoPointersTest.java           # runs them against the two-pointer solution
+        TwoSumIIBinarySearchTest.java          # runs them against the binary-search solution
+        TwoSumIIBruteForceTest.java            # runs them against the brute-force solution
   scripts/
-    test.sh                        # compile everything and run the full JUnit suite
+    test.sh                        # compile everything and run the JUnit tests
 ```
 
 ## How to compile and run
@@ -36,6 +41,15 @@ code/
 - `scripts/test.sh` — compiles everything and runs the full JUnit suite: every
   scenario is checked against every variant of each problem, so all the
   solutions must agree on every input.
+- `scripts/test.sh asymptotics.TwoSumIIBruteForceTest` — compiles everything
+  and runs the scenarios against one variant only. Use this while you are
+  working on one solution and the others are still empty. The class names
+  are listed in the layout above.
+
+Each problem's scenarios live in one abstract test class (`TwoSumIITest`,
+`RemoveDuplicatesTest`). The small classes that extend it do nothing but say
+which method to call, so the same scenarios run against every variant
+without being copied.
 
 ## What's here
 
