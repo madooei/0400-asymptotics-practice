@@ -1,10 +1,10 @@
 package asymptotics;
 
 /** Runs the Two Sum scenarios against the two-pointer solution. */
-public class TwoSumIITwoPointersTest extends TwoSumIITest {
+public class TwoSumTwoPointersTest extends TwoSumTest {
 
   @Override
   protected int[] twoSum(int[] numbers, int target) {
-    return TwoSumII.twoSum(numbers, target);
+    return TwoSum.twoSum(numbers, target);
   }
 }

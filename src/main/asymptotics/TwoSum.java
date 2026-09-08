@@ -1,9 +1,9 @@
 package asymptotics;
 
 /** Solutions to the Two Sum practice problem for a sorted array. */
-public final class TwoSumII {
+public final class TwoSum {
 
-  private TwoSumII() {
+  private TwoSum() {
     // This class should not be instantiated!
   }
 

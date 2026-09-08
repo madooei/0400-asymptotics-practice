@@ -22,16 +22,16 @@ code/
     main/
       asymptotics/                 # the two practice problems
         RemoveDuplicates.java      # two-pointer and shift-on-duplicate brute force
-        TwoSumII.java              # two-pointer, binary search, and brute force
+        TwoSum.java                # two-pointer, binary search, and brute force
     test/
       asymptotics/
         RemoveDuplicatesTest.java              # the scenarios, written once
         RemoveDuplicatesTwoPointersTest.java   # runs them against the two-pointer solution
         RemoveDuplicatesBruteForceTest.java    # runs them against the brute-force solution
-        TwoSumIITest.java                      # the scenarios, written once
-        TwoSumIITwoPointersTest.java           # runs them against the two-pointer solution
-        TwoSumIIBinarySearchTest.java          # runs them against the binary-search solution
-        TwoSumIIBruteForceTest.java            # runs them against the brute-force solution
+        TwoSumTest.java                        # the scenarios, written once
+        TwoSumTwoPointersTest.java             # runs them against the two-pointer solution
+        TwoSumBinarySearchTest.java            # runs them against the binary-search solution
+        TwoSumBruteForceTest.java              # runs them against the brute-force solution
   scripts/
     test.sh                        # compile everything and run the JUnit tests
 ```
@@ -41,12 +41,12 @@ code/
 - `scripts/test.sh` — compiles everything and runs the full JUnit suite: every
   scenario is checked against every variant of each problem, so all the
   solutions must agree on every input.
-- `scripts/test.sh asymptotics.TwoSumIIBruteForceTest` — compiles everything
+- `scripts/test.sh asymptotics.TwoSumBruteForceTest` — compiles everything
   and runs the scenarios against one variant only. Use this while you are
   working on one solution and the others are still empty. The class names
   are listed in the layout above.
 
-Each problem's scenarios live in one abstract test class (`TwoSumIITest`,
+Each problem's scenarios live in one abstract test class (`TwoSumTest`,
 `RemoveDuplicatesTest`). The small classes that extend it do nothing but say
 which method to call, so the same scenarios run against every variant
 without being copied.
@@ -56,6 +56,6 @@ without being copied.
 - `asymptotics.RemoveDuplicates` — the remove-duplicates practice problem:
   `removeDuplicates`, the O(n) two-pointer solution, and
   `removeDuplicatesBruteForce`, the O(n^2) shift-on-duplicate solution.
-- `asymptotics.TwoSumII` — the Two Sum practice problem: `twoSum`, the O(n)
+- `asymptotics.TwoSum` — the Two Sum practice problem: `twoSum`, the O(n)
   two-pointer solution; `twoSumBinarySearch`, the O(n log n) binary-search
   solution; and `twoSumBruteForce`, the O(n^2) nested-loop solution.

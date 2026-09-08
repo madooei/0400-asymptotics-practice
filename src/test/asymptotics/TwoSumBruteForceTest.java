@@ -1,10 +1,10 @@
 package asymptotics;
 
 /** Runs the Two Sum scenarios against the brute-force solution. */
-public class TwoSumIIBruteForceTest extends TwoSumIITest {
+public class TwoSumBruteForceTest extends TwoSumTest {
 
   @Override
   protected int[] twoSum(int[] numbers, int target) {
-    return TwoSumII.twoSumBruteForce(numbers, target);
+    return TwoSum.twoSumBruteForce(numbers, target);
   }
 }
