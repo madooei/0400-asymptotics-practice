@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
  * that says which method to call, so you can run the suite for one solution
  * at a time.
  */
-public abstract class TwoSumIITest {
+public abstract class TwoSumTest {
 
   // Calls the solution under test.
   protected abstract int[] twoSum(int[] numbers, int target);
