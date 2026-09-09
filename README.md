@@ -1,4 +1,4 @@
-# Asymptotic Analysis — Practice: Remove Duplicates and Two Sum II
+# Asymptotic Notation — Practice: Remove Duplicates and Two Sum II
 
 The companion code for two practice problems: removing duplicates from a
 sorted array, and Two Sum on a sorted array, each implemented in every
