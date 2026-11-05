@@ -1,8 +1,7 @@
 package asymptotics;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Tests for the remove-duplicates problem. Each test is one scenario from
