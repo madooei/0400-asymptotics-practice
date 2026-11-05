@@ -8,7 +8,6 @@ public final class TwoSum {
   }
 
   // Assumes numbers is sorted in non-decreasing order and a solution exists.
-  // Converges two pointers from both ends toward the target sum.
   public static int[] twoSum(int[] numbers, int target) {
     int left = 0;
     int right = numbers.length - 1;
@@ -29,7 +28,6 @@ public final class TwoSum {
   }
 
   // Assumes numbers is sorted in non-decreasing order and a solution exists.
-  // Checks every pair with two nested loops.
   public static int[] twoSumBruteForce(int[] numbers, int target) {
     for (int i = 0; i < numbers.length - 1; i++) {
       for (int j = i + 1; j < numbers.length; j++) {
@@ -42,7 +40,6 @@ public final class TwoSum {
   }
 
   // Assumes numbers is sorted in non-decreasing order and a solution exists.
-  // Binary-searches for each element's complement in the sorted tail.
   public static int[] twoSumBinarySearch(int[] numbers, int target) {
     for (int i = 0; i < numbers.length - 1; i++) {
       int complement = target - numbers[i];
