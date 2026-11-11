@@ -5,6 +5,6 @@ public class RemoveDuplicatesTwoPointersTest extends RemoveDuplicatesTest {
 
   @Override
   protected int removeDuplicates(int[] nums) {
-    return RemoveDuplicates.removeDuplicates(nums);
+    return RemoveDuplicatesTwoPointers.removeDuplicates(nums);
   }
 }

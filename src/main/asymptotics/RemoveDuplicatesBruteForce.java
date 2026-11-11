@@ -1,35 +1,16 @@
 package asymptotics;
 
-/** Solutions to the remove-duplicates practice problem for a sorted array. */
-public final class RemoveDuplicates {
+/** Practice problem: remove the duplicates from a sorted array by shifting the tail left. */
+public final class RemoveDuplicatesBruteForce {
 
-  private RemoveDuplicates() {
+  private RemoveDuplicatesBruteForce() {
     // This class should not be instantiated!
-  }
-
-  // Assumes nums is sorted in non-decreasing order. Removes the duplicates
-  // in place with two pointers in a single pass and returns the count of
-  // unique elements, kept at the front of the array.
-  public static int removeDuplicates(int[] nums) {
-    if (nums.length == 0) {
-      return 0;
-    }
-
-    int slow = 0;  // last slot of the unique prefix
-    for (int fast = 1; fast < nums.length; fast++) {
-      if (nums[fast] != nums[slow]) {
-        slow++;
-        nums[slow] = nums[fast];
-      }
-    }
-
-    return slow + 1;
   }
 
   // Assumes nums is sorted in non-decreasing order. Removes the duplicates
   // by shifting the tail left every time a duplicate is found and returns
   // the count of unique elements, kept at the front of the array.
-  public static int removeDuplicatesBruteForce(int[] nums) {
+  public static int removeDuplicates(int[] nums) {
     int n = nums.length;  // number of valid elements; shrinks as we remove duplicates
     for (int i = 1; i < n; i++) {
       if (nums[i] == nums[i - 1]) {
