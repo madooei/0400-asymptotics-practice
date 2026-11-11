@@ -5,6 +5,6 @@ public class TwoSumBinarySearchTest extends TwoSumTest {
 
   @Override
   protected int[] twoSum(int[] numbers, int target) {
-    return TwoSum.twoSumBinarySearch(numbers, target);
+    return TwoSumBinarySearch.twoSum(numbers, target);
   }
 }

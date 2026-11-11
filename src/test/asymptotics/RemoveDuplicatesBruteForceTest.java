@@ -5,6 +5,6 @@ public class RemoveDuplicatesBruteForceTest extends RemoveDuplicatesTest {
 
   @Override
   protected int removeDuplicates(int[] nums) {
-    return RemoveDuplicates.removeDuplicatesBruteForce(nums);
+    return RemoveDuplicatesBruteForce.removeDuplicates(nums);
   }
 }
