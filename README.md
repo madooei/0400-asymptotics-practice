@@ -23,6 +23,12 @@ code/
         TwoSumBruteForce.java              # check every pair
         TwoSumBinarySearch.java            # binary search for each complement
         TwoSumTwoPointers.java             # one pass with two pointers
+      demo/                                # one demo per solution class
+        RemoveDuplicatesBruteForceDemo.java
+        RemoveDuplicatesTwoPointersDemo.java
+        TwoSumBruteForceDemo.java
+        TwoSumBinarySearchDemo.java
+        TwoSumTwoPointersDemo.java
     test/
       asymptotics/
         RemoveDuplicatesTest.java              # the scenarios, written once
@@ -34,12 +40,14 @@ code/
         TwoSumTwoPointersTest.java             # runs them against TwoSumTwoPointers
   scripts/
     test.sh                                # compile everything and run the JUnit tests
+    run.sh                                 # compile everything and run one demo
 ```
 
 ## How to compile and run
 
 - `scripts/test.sh` — compiles everything and runs the full JUnit suite: every scenario is checked against every variant of each problem, so all the solutions must agree on every input.
 - `scripts/test.sh asymptotics.TwoSumBruteForceTest` — compiles everything and runs the scenarios against one variant only. Use this while you are working on one solution and the others are still empty. The class names are listed in the layout above.
+- `scripts/run.sh demo.TwoSumTwoPointersDemo` — compiles everything and runs that one demo. Every solution class has its own demo, `<Class>Demo`.
 
 Each problem's scenarios live in one abstract test class (`TwoSumTest`, `RemoveDuplicatesTest`). The small classes that extend it do nothing but say which class to call, so the same scenarios run against every variant without being copied.
 
@@ -52,3 +60,4 @@ Each solution is its own class, and every class for one problem has the same met
 - `asymptotics.TwoSumBruteForce` — `twoSum`, the O(n^2) solution that checks every pair with two nested loops.
 - `asymptotics.TwoSumBinarySearch` — `twoSum`, the O(n log n) solution that binary searches for each complement.
 - `asymptotics.TwoSumTwoPointers` — `twoSum`, the O(n) solution with two pointers.
+- `demo.RemoveDuplicatesBruteForceDemo`, `demo.RemoveDuplicatesTwoPointersDemo`, `demo.TwoSumBruteForceDemo`, `demo.TwoSumBinarySearchDemo`, and `demo.TwoSumTwoPointersDemo` — one demo per solution class, each on an example from the notes.
