@@ -51,7 +51,7 @@ code/
 
 Each problem's scenarios live in one abstract test class (`TwoSumTest`, `RemoveDuplicatesTest`). The small classes that extend it do nothing but say which class to call, so the same scenarios run against every variant without being copied.
 
-## What's here
+## Contents
 
 Each solution is its own class, and every class for one problem has the same method name.
 
